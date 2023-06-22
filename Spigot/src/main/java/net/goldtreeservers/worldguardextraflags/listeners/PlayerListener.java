@@ -54,7 +54,7 @@ public class PlayerListener implements Listener
 		player.removeMetadata(WorldGuardUtils.PREVENT_TELEPORT_LOOP_META, this.plugin);
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.LOWEST)
 	public void onPlayerDeathEvent(PlayerDeathEvent event)
 	{
 		Player player = event.getEntity();
